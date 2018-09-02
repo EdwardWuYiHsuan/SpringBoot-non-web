@@ -1,0 +1,24 @@
+// Plugin
+apply plugin: 'java'
+
+// Properties
+sourceCompatibility = 1.8  //JDK
+
+// Repository
+repositories {
+    jcenter()
+    maven {
+        url "http://repo1.maven.org/maven2/"
+    }
+}
+
+
+// Dependency
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web:2.0.4.RELEASE") {
+		exclude module : 'spring-boot-starter-logging'
+		exclude module : 'spring-boot-starter-tomcat'
+		exclude module : 'spring-web'
+		exclude module : 'spring-webmvc'
+	}
+}
