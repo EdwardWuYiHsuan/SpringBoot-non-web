@@ -17,7 +17,7 @@ public class SpringBootConsoleApplication implements CommandLineRunner {
 	public static void main(String[] args) 
 	{
 		SpringApplication application = new SpringApplication(SpringBootConsoleApplication.class);
-		application.setBannerMode(Banner.Mode.OFF);
+//		application.setBannerMode(Banner.Mode.OFF);  //setting in application.properties (spring.main.banner-mode=off)
 		application.run(args);
 	}
 	
